@@ -1,4 +1,4 @@
-package code.of.advent.diveshj21;
+package code.of.advent.diveshj21.day1;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -20,7 +20,7 @@ public class Day1 {
         ArrayList<Integer> leftList = new ArrayList<>();
         ArrayList<Integer> rightList = new ArrayList<>();
         for (var line : lines) {
-            var splitLine = line.split("   ");
+            var splitLine = line.split(" {3}");
             leftList.add(Integer.parseInt(splitLine[0]));
             rightList.add(Integer.parseInt(splitLine[1]));
         }
@@ -35,7 +35,7 @@ public class Day1 {
         HashMap<Integer, Integer> rightCount = new HashMap<>();
 
         for (var line : lines) {
-            var splitLine = line.split("   ");
+            var splitLine = line.split(" {3}");
             var leftNumber = Integer.parseInt(splitLine[0]);
             var rightNumber = Integer.parseInt(splitLine[1]);
             leftCount.put(leftNumber, leftCount.getOrDefault(leftNumber, 0) + 1);
