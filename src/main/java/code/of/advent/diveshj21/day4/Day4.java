@@ -14,8 +14,8 @@ public class Day4 {
         var lines = Files.readAllLines(Path.of("input-4.txt"));
         var wordsearch = lines.stream().map(String::toCharArray).toArray(char[][]::new);
         var wordsearcher = new Wordsearcher();
-        var part1Answer = wordsearcher.search(wordsearch);
 
+        var part1Answer = wordsearcher.search(wordsearch);
         logger.info("Part 1: {}", part1Answer);
 
         var part2Answer = wordsearcher.searchMASinX(wordsearch);
