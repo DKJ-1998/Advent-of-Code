@@ -20,7 +20,8 @@ public class Day6 {
         var part1Answer = router.routeGuard(map);
         logger.info("Part 1: {}", part1Answer);
 
-        var part2Answer = router.blockGuard(map);
+        var mapPart2 = lines.stream().map(String::toCharArray).toArray(char[][]::new);
+        var part2Answer = router.blockGuard(mapPart2);
         logger.info("Part 2: {}", part2Answer);
     }
 }
