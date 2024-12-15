@@ -7,14 +7,13 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class EquationFinder {
     private static final Logger logger = LoggerFactory.getLogger(EquationFinder.class);
 
     private final List<Operator> validOperators;
-
-    public EquationFinder(List<Operator> validOperators) {
-        this.validOperators = validOperators;
-    }
 
     public long find(Map<Long, Long[]> calibrations) {
         var sum = 0L;
